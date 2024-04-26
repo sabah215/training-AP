@@ -27,7 +27,7 @@ public class FrequencyOfElement {
 		 * */
 		int [] arr = {1, 1, 2, 3, 3};
 		getFrequencyOfElementsUsingBruteForce(arr);
-		getFrequencyOfElements(arr);
+//		getFrequencyOfElements(arr);
 	}
 	
 	public static void getFrequencyOfElementsUsingBruteForce(int [] arr) {
@@ -46,7 +46,7 @@ public class FrequencyOfElement {
 		 * **/
 		
 		boolean [] visited = new boolean[n];
-		// Since all the elements are unvisited.
+		// Since all the elements are unvisited initially.
 		Arrays.fill(visited, false);
 		
 		/**
@@ -64,7 +64,7 @@ public class FrequencyOfElement {
 			if(visited[i] == true)
 				continue;
 			
-			// if not then
+			// if not then count the first element
 			int count = 1;
 			/**
 			 * Now loop through the rest of the elements and check 
@@ -77,7 +77,7 @@ public class FrequencyOfElement {
 					count++;
 				}
 			}
-			System.out.println("Element "+ ++i + " occurs " +count + " times, ");
+			System.out.println("Element "+ arr[i] + " occurs " +count + " times, ");
 		}	
 	}
 	
@@ -106,7 +106,7 @@ public class FrequencyOfElement {
 		}
 		int i = 0;
 		for(Map.Entry<Integer, Integer> entry : map.entrySet()) {
-			System.out.println("Element "+ ++i + "occurs " +entry.getValue() + "times, ");
+			System.out.println("Element "+ ++i + " occurs " + entry.getValue() + " times, ");
 		}
 	}
 }
