@@ -18,7 +18,6 @@ class FullTime extends Employee{
 public class MethodOverriding3 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		// Protected method is used within same package and within extended child class
 		// Example 1: 
 		Employee emp = new Employee();

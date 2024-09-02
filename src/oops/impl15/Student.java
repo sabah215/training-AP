@@ -39,9 +39,9 @@ public class Student {
 	public String toString() {
 		return "Student [name=" + name + ", id=" + id + ", age=" + age + "]";
 	}
-
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		
 		/**
 		 * In this example, the values are passed to set method to set the properties of student s1.
@@ -56,11 +56,11 @@ public class Student {
 		Student s2 = new Student();
 		s2.setStudentData(s1); 	// call by reference
 		System.out.println(s2);
-		
-		s1.setStudentData("John",121,9);
-		
-		System.out.println(s1);
-		System.out.println(s2);
+//		
+//		s1.setStudentData("John",121,9);
+//		
+//		System.out.println(s1);
+//		System.out.println(s2);
 	}
 
 }

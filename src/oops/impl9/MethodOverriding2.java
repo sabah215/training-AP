@@ -27,7 +27,6 @@ class Dog extends Animal{
 public class MethodOverriding2 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		/* Example 1: Parent class sleep() method called. */
 		 Animal animal = new Animal();

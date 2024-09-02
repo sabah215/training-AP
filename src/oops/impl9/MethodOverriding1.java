@@ -30,7 +30,6 @@ class Car extends Vehicle {
 public class MethodOverriding1 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		// Example 1: Child class method called
 		Car car = new Car();
