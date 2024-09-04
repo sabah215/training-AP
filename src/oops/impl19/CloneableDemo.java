@@ -8,9 +8,19 @@ public class CloneableDemo {
 			Address ad = new Address("56 North st", "33333", "Norfolk", "VA");
 			Employee e1 = new Employee("John", 101, 50000, ad);
 			Employee e2 = (Employee) e1.clone();
-			System.out.println(e2.id);
-			System.out.println(e2.name);
-			System.out.println(e2.address);
+			System.out.println(e1);
+			System.out.println(e2);
+			System.out.println("-------------------------------------------");
+			
+			
+			e1.address.street = "2 South Ave";
+			e1.address.zipcode = "44444";
+			e1.address.city = "Boston";
+			e1.address.state = "MA";
+			
+			System.out.println(e1);
+			System.out.println(e2);
+			
 		}catch(CloneNotSupportedException e) {
 			e.printStackTrace();
 		}
