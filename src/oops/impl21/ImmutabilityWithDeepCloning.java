@@ -81,6 +81,11 @@ final class ImmutableClass3{
 		  if the caller modifies the returned object (as seen in student.getAddress().setZipcode(66666);), 
 		  it does not affect the internal state of the immutable object.
 		  
+		  Why Deep Cloning is Important:
+			Deep cloning ensures that the mutable Address3 object is completely isolated from the internal state of ImmutableClass3. 
+			Without deep cloning, changes to the original or returned Address3 object could directly affect the 
+			ImmutableClass3 object, violating its immutability.
+		  
 	 * */
 }
 

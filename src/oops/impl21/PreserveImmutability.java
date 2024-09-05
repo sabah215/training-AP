@@ -15,7 +15,19 @@ public class PreserveImmutability {
 	}
 }
 
+/**
+ * Marking the class as final: This ensures that no subclass can extend and potentially alter 
+ * the behavior of the ImmutableStudent2 class.
+ * */
+
 final class ImmutableStudent2{
+	
+	/**
+	 * Private final fields: All fields (id, name, and address) are declared private and final. 
+	 * This ensures that the fields can be assigned only once, either during object construction or 
+	 * initialization, and cannot be changed afterward.
+	 * 
+	 * */
 	
 	private final int id;
 	private final String name;
@@ -26,6 +38,11 @@ final class ImmutableStudent2{
 		this.name = name;
 		this.address = address;
 	}
+	
+	/**
+	 * No setter methods: The class provides no setter methods for modifying the id, name, or address fields, 
+	 * so the state of the object cannot be changed after it is created.
+	 * */
 
 	public int getId() {
 		return id;
@@ -34,7 +51,14 @@ final class ImmutableStudent2{
 	public String getName() {
 		return name;
 	}
-
+	
+	/**
+	 * 
+	 * Defensive copying (cloning): The getAddress() method returns a defensive copy of the Address2 object using the clone() method. 
+	 * This prevents external code from modifying the internal Address2 object of the ImmutableStudent2 instance. 
+	 * Without this, a caller could retrieve the original Address2 object and change its properties, thus breaking immutability.
+	 * 
+	 * */
 	public Address2 getAddress() throws CloneNotSupportedException{
 		return (Address2) address.clone();
 	}
